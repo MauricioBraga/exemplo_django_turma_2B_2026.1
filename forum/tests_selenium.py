@@ -331,8 +331,7 @@ class Teste_03_Criacao_Resposta(BaseTestCase):
         time.sleep(3)  # Apenas para visualizar o teste, pode ser removido
 
         # grava a resposta
-        # self.driver.find_element(By.TAG_NAME, "form").submit()
-
+       
         botao_resposta = self.driver.find_element(By.NAME, "salvar_resposta")
         botao_resposta.click()
 
