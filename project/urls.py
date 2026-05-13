@@ -18,8 +18,11 @@ from django.contrib import admin
 from django.urls import path
 
 from django.urls import include
+from django.views.generic.base import RedirectView
 
 urlpatterns = [
     path('forum/', include('forum.urls')),
     path('admin/', admin.site.urls),
+    path('', RedirectView.as_view(url='/forum/', permanent=False), name='home'),  # Redirect root URL to forum
+
 ]
